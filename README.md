@@ -13,3 +13,19 @@ Topic name :- Coffee Beans Sales System
 •	Almost 80% of the population are coffee lovers. <br>
 •	Coffee Shop Management System consists following modules such as; Login Module, Employee Module, Administrator Module. <br>
 •	This project is developed in JSP. <br>
+
+<br><br>
+
+<strong>2.	Objective</strong>
+
+•	The objective for Coffee Beans Sales System is - <br> 
+•	To make our business digitally known to the world <br>
+•	To provide our customers the most aromatic and exotic coffee beans on their fingertips. <br> 
+•	To reduce the overall management costs thus ensuring greater profits and reduced burdens. <br> 
+•	To make stability and operability by people of average intelligence which can adjust into any business frame. <br>
+•	To provide the customer with best User Experience. <br>
+•	To sell the Coffee Beans in the affordable prices. <br>
+•	To provide admins, the deep insights of all the financials and today sales. <br>
+•	To make things flexible in the system according to the changing environment and customer requirement <br>
+
+<br><br>
