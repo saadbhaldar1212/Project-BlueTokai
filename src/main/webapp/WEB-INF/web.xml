@@ -1,0 +1,67 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>UserSignUpServlet</servlet-name>
+  	<display-name>UserSignUpServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.bluetokai.Final_BlueTokai.servlets.UserSignUpServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<display-name>UserLoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.bluetokai.Final_BlueTokai.servlets.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminLoginServlet</servlet-name>
+  	<display-name>AdminLoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.bluetokai.Final_BlueTokai.servlets.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ProductOperationServlet</servlet-name>
+  	<display-name>ProductOperationServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.bluetokai.Final_BlueTokai.servlets.ProductOperationServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CategoryDao</servlet-name>
+  	<display-name>CategoryDao</display-name>
+  	<description></description>
+  	<servlet-class>com.bluetokai.Final_BlueTokai.dao.CategoryDao</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SaveToDBServlet</servlet-name>
+  	<display-name>SaveToDBServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.bluetokai.Final_BlueTokai.servlets.SaveToDBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserSignUpServlet</servlet-name>
+  	<url-pattern>/UserSignUpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<url-pattern>/UserLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminLoginServlet</servlet-name>
+  	<url-pattern>/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ProductOperationServlet</servlet-name>
+  	<url-pattern>/ProductOperationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CategoryDao</servlet-name>
+  	<url-pattern>/CategoryDao</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveToDBServlet</servlet-name>
+  	<url-pattern>/SaveToDBServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
