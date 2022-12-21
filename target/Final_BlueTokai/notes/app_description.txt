@@ -1,0 +1,43 @@
+(Reference taken from Cafe Coffee Day website)
+Explanation:-
+
+Main page will consist of 
+- Home
+- Order Online
+- E-shopping
+- Log out Button
+
+Pages like About us, Contact us will be displayed in the footer as a part of scrollspy with the existing elements present in that page
+
+---------------------------------------------------------------------------------------------------------
+
+- Online buying functionalities (e_shopping.html) 
+- Online Food ordering functionalities (order_now.html)
+- Cafe's menu (menu.html)
+
+
+#Online Buying Functionalities will consist of buying
+- pattie maker, 
+- oven, 
+- pizza base, 
+- burger bun,
+- glasses for the cold drinks, etc.
+
+Every image of it will be taken from internet
+
+*****************************************************
+
+#Online Food Ordering Functionalities will consist of buying
+-  Every single item I have mentioned in the menu
+- The menu should be minimilistic and unique 
+- Each item should have it own image
+
+Every image will be taken from internet
+
+********************************************************
+
+#Cafe's Menu will be a one page image taken from outside
+It will consist of 
+
+- All the names of the servig dishes in one card (the same card will be given to the customer in offline shop)
+

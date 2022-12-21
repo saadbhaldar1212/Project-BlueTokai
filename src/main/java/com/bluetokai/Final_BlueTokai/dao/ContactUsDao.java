@@ -7,42 +7,41 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import com.bluetokai.Final_BlueTokai.entities.Category;
 import com.bluetokai.Final_BlueTokai.entities.ContactUs;
 
 public class ContactUsDao {
-	
-	private SessionFactory factory;
 
-	public ContactUsDao(SessionFactory factory) {
-		this.factory = factory;
-	}
+    private SessionFactory factory;
+
+    public ContactUsDao(SessionFactory factory) {
+        this.factory = factory;
+    }
 
 //	saves the category to db
-	public int saveCategory(ContactUs cu) {
+    public int saveCategory(ContactUs cu) {
 
-		Session session = this.factory.openSession();
-		Transaction tx = session.beginTransaction();
-		int contId = (Integer) session.save(cu);
+        Session session = this.factory.openSession();
+        Transaction tx = session.beginTransaction();
+        int contId = (Integer) session.save(cu);
 
-		try {
+        try {
 
-			tx.commit();
-			session.close();
+            tx.commit();
+            session.close();
 
-		} catch (Exception e) {
+        } catch (Exception e) {
 
-			e.printStackTrace();
-		}
-		return contId;
-	}
-	
-	public List<ContactUs> getContacts() {
-		Session s = this.factory.openSession();
-		Query query = s.createQuery("from ContactUs");
-		List<ContactUs> list = query.list();
-		return list;
+            e.printStackTrace();
+        }
+        return contId;
+    }
 
-	}
-	
+    public List<ContactUs> getContacts() {
+        Session s = this.factory.openSession();
+        Query query = s.createQuery("from ContactUs");
+        List<ContactUs> list = query.list();
+        return list;
+
+    }
+
 }

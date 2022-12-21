@@ -8,39 +8,39 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.bluetokai.Final_BlueTokai.entities.BulkOrders;
-import com.bluetokai.Final_BlueTokai.entities.ContactUs;
 
 public class BulkOrdersDao {
-	private SessionFactory factory;
 
-	public BulkOrdersDao(SessionFactory factory) {
-		this.factory = factory;
-	}
+    private SessionFactory factory;
+
+    public BulkOrdersDao(SessionFactory factory) {
+        this.factory = factory;
+    }
 
 //	saves the category to db
-	public int saveCategory(BulkOrders bo) {
+    public int saveCategory(BulkOrders bo) {
 
-		Session session = this.factory.openSession();
-		Transaction tx = session.beginTransaction();
-		int boId = (Integer) session.save(bo);
+        Session session = this.factory.openSession();
+        Transaction tx = session.beginTransaction();
+        int boId = (Integer) session.save(bo);
 
-		try {
+        try {
 
-			tx.commit();
-			session.close();
+            tx.commit();
+            session.close();
 
-		} catch (Exception e) {
+        } catch (Exception e) {
 
-			e.printStackTrace();
-		}
-		return boId;
-	}
-	
-	public List<BulkOrders> getInfo() {
-		Session s = this.factory.openSession();
-		Query query = s.createQuery("from BulkOrders");
-		List<BulkOrders> list = query.list();
-		return list;
+            e.printStackTrace();
+        }
+        return boId;
+    }
 
-	}
+    public List<BulkOrders> getInfo() {
+        Session s = this.factory.openSession();
+        Query query = s.createQuery("from BulkOrders");
+        List<BulkOrders> list = query.list();
+        return list;
+
+    }
 }
