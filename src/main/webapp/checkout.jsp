@@ -36,23 +36,26 @@
                         <div class="card-body">
                             <h3>Details for Order</h3>
                             <br>
-                            <form action="SaveToDBServlet" method="post">
+                            <form action="#"> 
+                                
                                 <div class="form-group">
                                     <label for="exampleInputEmail1" class="form-label">Email
-                                        address</label> <input type="email" class="form-control"
+                                        address</label> <input name="o1" type="email" class="form-control"
                                                            id="exampleInputEmail1" aria-describedby="emailHelp"
                                                            value="">
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <label for="exampleInputName" class="form-label">Name</label> <input
-                                        type="text" class="form-control text-muted" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" value="">
+                                    <label for="exampleInputName" class="form-label">Name</label> 
+                                    <input name="o2"
+
+                                           type="text" class="form-control text-muted" id="exampleInputEmail1"
+                                           aria-describedby="emailHelp" value="">
                                 </div>
                                 <br>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1" class="form-label">Full Residential Address</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    <textarea name="o3" class="form-control" id="exampleFormControlTextarea1"
                                               rows="3" required></textarea>
                                 </div>
 
