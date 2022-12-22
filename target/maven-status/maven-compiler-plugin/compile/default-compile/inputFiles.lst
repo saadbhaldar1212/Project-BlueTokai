@@ -5,7 +5,6 @@ D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\dao\Prod
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\entities\User.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\servlets\UserSignUpServlet.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\dao\CategoryDao.java
-D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\entities\Order.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\dao\KioskDao.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\entities\BulkOrders.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\entities\Category.java
@@ -13,7 +12,6 @@ D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\servlets
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\dao\UserDao.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\helper\FactoryProvider.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\dao\ContactUsDao.java
-D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\dao\OrderDao.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\servlets\UserLoginServlet.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\entities\Kiosk.java
 D:\GitHub\Project-BlueTokai\src\main\java\com\bluetokai\Final_BlueTokai\servlets\SaveToDBServlet.java

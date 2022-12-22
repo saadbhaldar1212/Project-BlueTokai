@@ -52,7 +52,7 @@
                 <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">All
                     products</li>
-                <li style="padding-left: 950px;"><h5>
+                <li class="text ms-auto" style="margin-right: 3rem"><h5>
                         <%=list.size()%>
                         Products
                     </h5></li>
