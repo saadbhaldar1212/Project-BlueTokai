@@ -1,8 +1,8 @@
 package com.bluetokai.Final_BlueTokai.servlets;
 
 import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.*;
 
 public class AdminLoginServlet extends HttpServlet {
 
