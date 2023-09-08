@@ -24,7 +24,8 @@ public class AdminLoginServlet extends HttpServlet {
 
         if (adminUsername.equals("admin") && adminPassword.equals("admin") && adminKey.equals("976400")) {
             response.sendRedirect("admin_index.jsp");
-        } else {
+        } else if () 
+        else {
             httpSession.setAttribute("admin_msg", "Invalid Credentials");
             response.sendRedirect("admin_log_in.jsp");
         }
