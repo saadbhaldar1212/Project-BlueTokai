@@ -37,6 +37,27 @@ public class UserDao {
         return user;
     }
 
+    // get user by email only
+    public User getUserByEmail(String email) {
+        User user = null;
+
+        try {
+
+            String query = "from User where userEmail =: e";
+            Session session = this.factory.openSession();
+            Query q = session.createQuery(query);
+            q.setParameter("e", email);
+
+            user = (User) q.uniqueResult();
+
+            session.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
     //fetch individual
     public User getIndividualUser(String name, String email, String password) {
         User user = null;

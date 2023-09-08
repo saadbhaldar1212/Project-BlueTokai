@@ -7,6 +7,7 @@ import javax.servlet.http.*;
 import com.bluetokai.Final_BlueTokai.dao.UserDao;
 import com.bluetokai.Final_BlueTokai.entities.User;
 import com.bluetokai.Final_BlueTokai.helper.FactoryProvider;
+import com.bluetokai.Final_BlueTokai.regex.EmailValidator;
 
 public class UserLoginServlet extends HttpServlet {
 
@@ -28,15 +29,29 @@ public class UserLoginServlet extends HttpServlet {
         //authenticate
         UserDao userDao = new UserDao(FactoryProvider.getFactory());
         User user = userDao.getUserByEmailAndPassword(u_email, u_pass);
+        User userUsername = userDao.getUserByEmail(u_email);
 
         HttpSession httpSession = request.getSession();
+        EmailValidator emailValidator;
 
         if (user == null) {
 
             httpSession.setAttribute("login_message", "Invalid Credentials");
             response.sendRedirect("user_log_in.jsp");
 
-        } else {
+        } 
+        //Regex Email Validations
+        else if (emailValidator.isValidEmail(userUsername)) {
+            httpSession.setAttribute("login_message", "Invalid Email Credentials");
+            response.sendRedirect("user_log_in.jsp");
+        }
+        //Rest of the validations
+        // else if (emailValidator.isValidEmail(user)) {
+        //     httpSession.setAttribute("login_message", "Invalid Email Credentials");
+        //     response.sendRedirect("user_log_in.jsp");
+        // }
+        
+        else {
 
             response.sendRedirect("index.jsp");
         }
