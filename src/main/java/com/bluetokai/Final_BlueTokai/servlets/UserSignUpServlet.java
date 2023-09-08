@@ -28,7 +28,6 @@ public class UserSignUpServlet extends HttpServlet {
         List<User> list = dDao.getAllUsers();
 
         try {
-
             String new_username = request.getParameter("new_username");
             String new_email = request.getParameter("new_email");
             String new_password1 = request.getParameter("new_password1");
@@ -40,6 +39,7 @@ public class UserSignUpServlet extends HttpServlet {
 
             // Creating user object to store data
             User user = new User(new_username, new_email, new_password1, new_password2, new_address1, new_address2, new_city, new_zip);
+            User userUsername = userDao.getUserByEmail(new_email);
 
             Session hibernateSession = FactoryProvider.getFactory().openSession();
             Transaction tx = hibernateSession.beginTransaction();
@@ -50,6 +50,7 @@ public class UserSignUpServlet extends HttpServlet {
             hibernateSession.close();
 
             HttpSession httpSession = request.getSession();
+            EmailValidator emailValidator;
 
             for (User u : list) {
                 if (new_email.equals(u.getUserEmail())) {
@@ -62,7 +63,13 @@ public class UserSignUpServlet extends HttpServlet {
             if (new_username.isEmpty()) {
                 httpSession.setAttribute("message1", "All Fields are Required");
                 response.sendRedirect("user_sign_in.jsp");
-            } else {
+            } 
+            //Regex Email Validations
+            else if (emailValidator.isValidEmail(userUsername)) {
+                httpSession.setAttribute("message1", "Invalid Email Credentials");
+                response.sendRedirect("user_sign_in.jsp");
+            }
+            else {
                 httpSession.setAttribute("message", "Registration Successful");
                 response.sendRedirect("user_sign_in.jsp");
             }
