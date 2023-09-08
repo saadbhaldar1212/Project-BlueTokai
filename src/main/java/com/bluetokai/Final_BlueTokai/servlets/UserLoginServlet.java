@@ -36,7 +36,7 @@ public class UserLoginServlet extends HttpServlet {
 
         if (user == null) {
 
-            httpSession.setAttribute("login_message", "Invalid Credentials");
+            httpSession.setAttribute("login_message", "Credentials cannot be null");
             response.sendRedirect("user_log_in.jsp");
 
         } 
@@ -47,7 +47,7 @@ public class UserLoginServlet extends HttpServlet {
         }
         //Null check
         else if (adminUsername == null || adminUsername.length() == 0 || adminUsername.equals("") || adminPassword == null || adminPassword.length() == 0 || adminPassword.equals("")) {
-            httpSession.setAttribute("admin_msg", "Enter valid credentials");
+            httpSession.setAttribute("admin_msg", "Credentials cannot be null");
             response.sendRedirect("admin_log_in.jsp");
         } 
         //Password length check
