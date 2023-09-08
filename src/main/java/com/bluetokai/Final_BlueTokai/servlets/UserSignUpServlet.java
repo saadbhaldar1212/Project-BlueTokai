@@ -38,7 +38,8 @@ public class UserSignUpServlet extends HttpServlet {
             String new_zip = request.getParameter("new_zip");
 
             // Creating user object to store data
-            User user = new User(new_username, new_email, new_password1, new_password2, new_address1, new_address2, new_city, new_zip);
+            User user = new User(new_username, new_email, new_password1, new_password2, new_address1, new_address2,
+                    new_city, new_zip);
             User userUsername = userDao.getUserByEmail(new_email);
 
             Session hibernateSession = FactoryProvider.getFactory().openSession();
@@ -58,17 +59,39 @@ public class UserSignUpServlet extends HttpServlet {
                     response.sendRedirect("user_sign_in.jsp");
                 }
             }
-
             // validations
             if (new_username.isEmpty()) {
                 httpSession.setAttribute("message1", "All Fields are Required");
                 response.sendRedirect("user_sign_in.jsp");
-            } 
-            //Regex Email Validations
+            }
+            // Regex Email Validations
             else if (emailValidator.isValidEmail(userUsername)) {
                 httpSession.setAttribute("message1", "Invalid Email Credentials");
                 response.sendRedirect("user_sign_in.jsp");
             }
+            // Null check
+            else if (new_username == null || new_username.length() == 0 || new_username.equals("")
+                    || new_password1 == null || new_password1.length() == 0 || new_password1.equals("")
+                    || new_password2 == null || new_password2.length() == 0 || new_password2.equals("")) {
+                httpSession.setAttribute("admin_msg", "Enter valid credentials");
+                response.sendRedirect("user_sign_in.jsp");
+            }
+            // Password length check
+            else if (new_password1.length() <= 5) {
+                httpSession.setAttribute("admin_msg", "Minimum Password length must be 6 or more");
+                response.sendRedirect("user_sign_in.jsp");
+            }
+            // Password length check
+            else if (new_password2.length() <= 5) {
+                httpSession.setAttribute("admin_msg", "Minimum Password length must be 6 or more");
+                response.sendRedirect("user_sign_in.jsp");
+            }
+            //Password and Confirm Password check
+            else if (new_password1.equals(new_password2)) {
+                httpSession.setAttribute("admin_msg", "Password did't match");
+                response.sendRedirect("user_sign_in.jsp");
+            }
+             
             else {
                 httpSession.setAttribute("message", "Registration Successful");
                 response.sendRedirect("user_sign_in.jsp");

@@ -45,6 +45,16 @@ public class UserLoginServlet extends HttpServlet {
             httpSession.setAttribute("login_message", "Invalid Email Credentials");
             response.sendRedirect("user_log_in.jsp");
         }
+        //Null check
+        else if (adminUsername == null || adminUsername.length() == 0 || adminUsername.equals("") || adminPassword == null || adminPassword.length() == 0 || adminPassword.equals("")) {
+            httpSession.setAttribute("admin_msg", "Enter valid credentials");
+            response.sendRedirect("admin_log_in.jsp");
+        } 
+        //Password length check
+        else if (adminPassword.length() <= 5){
+            httpSession.setAttribute("admin_msg", "Minimum Password length must be 6 or more");
+            response.sendRedirect("admin_log_in.jsp");
+        }
         //Rest of the validations
         // else if (emailValidator.isValidEmail(user)) {
         //     httpSession.setAttribute("login_message", "Invalid Email Credentials");
