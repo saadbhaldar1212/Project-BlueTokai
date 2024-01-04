@@ -1,3 +1,2 @@
-/.style.css
-/.style1.css
-/.styles.css
+*.css
+!bootstrap.min.css
